@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+		
+	<!--实体映射文件 -->
+	<mapper namespace="gl.dao.IUserDAO">
+		<select id="findUserByNameAndPwd" parameterType="gl.vo.Users" resultType="gl.vo.Users">
+		  select userid,loginname,loginpwd,realname,phone from t_user 
+		  where loginname=#{loginname} and loginpwd=#{loginpwd}
+		</select>
+	</mapper>
